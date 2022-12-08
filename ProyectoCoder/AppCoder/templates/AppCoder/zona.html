@@ -1,0 +1,25 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+
+    <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+    <h1>Zona Residencial</h1>
+    <p>Acá va la info de la Zona Residencial</p>
+
+    <p>
+        Cualquier cosa 
+    <p>
+    Ingresar zona residencial:
+    <br>
+    <form action=""     method="post">{% csrf_token %}
+        <table>
+            {{miFormulario.as_table}}
+        </table>
+        <input type="submit",value="Enviar">
+    </form>
+
+
+{% endblock %}
