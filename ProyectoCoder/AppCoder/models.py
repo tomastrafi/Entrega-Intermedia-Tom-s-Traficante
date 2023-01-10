@@ -18,3 +18,5 @@ class Deporte(models.Model):
     club=models.CharField(max_length=40)
     posicion=models.CharField(max_length=40)
     años_jugando=models.IntegerField()
+
+    

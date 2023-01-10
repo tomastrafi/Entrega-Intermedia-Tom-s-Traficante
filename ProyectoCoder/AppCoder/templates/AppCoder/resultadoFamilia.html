@@ -1,0 +1,16 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+
+Nombre : {{nombre}}
+<br>
+Familia: {{familia}}
+{%for familia in familias%}
+    {{familia.nombre}}
+    <br>
+{%endfor%}
+
+{% endblock %}

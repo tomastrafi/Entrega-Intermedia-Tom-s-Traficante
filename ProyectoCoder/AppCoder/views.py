@@ -10,6 +10,13 @@ from AppCoder.forms import FamiliaFormulario
 from AppCoder.forms import ZonaFormulario
 from AppCoder.forms import DeporteFormulario
 
+def buscar(request):
+    nombre_views = request.GET['nombre']
+    familia_todos = Familia.objects.filter(nombre=nombre_views)
+    return render(request,'AppCoder/resultadoFamilia.html',{'nombre':nombre_views,'familia':familia_todos})
+
+def buscarfamilia(request):
+    return render(request,'AppCoder/busquedaFamilia.html')
 # Create your views here.
 def inicio(request):
     return render(request,'AppCoder/Inicio.html')
